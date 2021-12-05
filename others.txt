@@ -1,0 +1,33 @@
+Need Help?
+git help <verb>
+git <verb> --help
+
+ex- git help config
+_____________________
+
+git init
+
+--------
+
+to track
+ls -la
+
+git init
+
+to stop tracking 
+[rm (remove) rf .git]
+
+rem rf .git
+
+-> ls -la
+(now no more tracking)
+----------------
+git status
+
+-------------------
+touch .<file name ??> #to create a specific file using git apps in the folder u r currently working in.
+
+ex -
+$touch .gitignore
+------------------------
+ 

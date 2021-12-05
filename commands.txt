@@ -1,0 +1,268 @@
+
+
+----------------
+Deleting a branch
+
+$ git branch --merged
+$ git branch -d <branch_name> # this will delete the branch locally
+$ git branch -a
+$ git push origin --delete <branch_name> # this will delete the branch in remote repository
+
+-----------------
+Merge a branch
+
+$ git chechout main
+$ git pull origin main
+$ git branch --merged
+$ git merge <branch_name>
+$ git psuh origin main
+
+-------------------------
+git remote add origin main <git url> # if you want to push your work i.e your local file to the git 					repository in github. if the repo is yours, create it the repo 					and use this commond in the target folder.
+
+git pull origin main # helps update your local files with the latest files status in github
+
+--------------
+if we want to stop tracking the current dir
+use
+rm -rf .git
+
+to restart tracking
+git init
+-----
+ls -a # to reveal all the files in the current directory even the hiden ones
+
+ls -la to list all the files in the directeries
+
+
+------------
+to change the infamous branch name "master" to "main"
+use
+git branch master -m main
+-----------------
+touch .<file name ??> #to create a specific file using git apps in the folder u r currently working in.
+
+ex -
+$touch .gitignore
+
+---------------------
+Syncing Github
+
+Clone
+git clone
+
+Fetch
+git fetch
+
+Pull
+git pull
+
+git branch (for list of local branchs)
+git branch -a (for the list of all the branchs in local as well as the remote branchs)
+
+Releases (kinda important)
+
+
+
+==============================
+Managing Projects
+1) Contributors
+2) Issues
+3) Labels
+4) Miletones
+5) projects
+
+
+========================================
+git log --oneline --graph --decorate --all
+git push origin <name of the branch>
+
+==================================================
+cant see the wiki tab in my github
+go to settings -> features
+learn all the features
+=================================================
+Why Github
+1) cloud Repository
+2) collaborative Development
+3) porject management tools
+
+Working with Github
+
+you will need to learn:
+
+1) set up remote
+2) Push
+3) Fetch/Pull
+
+Remote
+git remote add NAME URL
+# git remote remove NAME
+# git rename OLDNAME NEWNAME
+# git remote -v [an option to list remotes; use git remote or use "-v" one for extra details]
+
+Git Push
+
+git push REMOTE BRANCH
+# git push --set-upstream-to origin main
+git push -u origin main # --set-upstream
+# git push --all
+# git branch --set -upstream-to <origin/remote-branch>
+==================================================
+Git Clean
+
+git clean -n # dry run
+git clean -d # directories
+git clean -f # force
+
+=======================================================
+Stashing Code
+
+git stash
+# git stash list [checks how many list of stash you have]
+# git stash apply [to apply th changes in stash]
+# git stash pop
+
+git stash apply 0 [this will bring the changes back but not stage them. means in the zero postion]
+if want to rewind back to do something else use git restore .
+and then use [git stash] list to check what you have on stash
+sometimes you have to ALT or clilck on the use Regular Expersion icon [.* {. is a square dot}] + R to make the replace all option avaliable.
+
+
+======================================
+Conflicts
+
+git switch -c <name_this_anything>
+{and then go to any particular file and fix the changes}
+
+git merge [fixheadline] --> you will run into a merge conflict  
+
+use git checkout <branch_name> to go back to any branch
+
+in/using a live server extension (idk)
+win cmmd = ctrl + shift + p
+mac cmmd = cmd + shift + p
+
+extension installed: (Vistual studio)
+Live server 
+emoji sense
+
+================
+Deleting a branch
+
+git branch [to check all the branches you have]
+
+git branch --delete NAME
+# git branch -d NAME
+# git branch -D NAME
+
+Git Flow
+
+1) Feature/Fix branch
+2) Make changes 
+3) Merge to master
+4) Delete old branch
+===========
+Merging
+git merge <branch>
+
+use "git branch" to check how many branches to you have
+use "git switch main" to go back to main branch
+and **check if "git switch <branch_name>" is a command or not.
+
+========
+git branch
+# * main
+
+git switch -c NAME
+# git checkout -b NAME
+===========
+
+Rebasing
+git rebase <branch>/<commit>
+# git rebase --interactive <branch>/<commit>
+# git rebase -i HEAD~#
+# git rebase -i --root
+
+move any of the commits anywhere and make it so appear tha it happened in the past (the earliest commit)
+or in the future (the lastest commit)
+-------
+(soft reset)git reset <paste log id>
+(hard reset)git reset hard <paste log id>
+
+git log --oneline
+
+Amending
+
+git commit -amend
+#git commit -am 'New commit message'
+#git commit -amend --no-edit
+
+while amending 
+if nothing is opening up fire up a command line and  type
+git config --global core.editor notepad (or any other eitor)
+
+you can either change the text if you do save it or else just close it  and the change will be done
+
+git lens
+
+you can manually add files to staged or unstaged by going to souce control tab in vstudio or type "git add ." to do the same
+ 
+
+git log --online
+
+git diff
+
+
+to rename a file
+git mv
+
+git rm (filename.extention) {for deleting a file}
+{to undo the above 
+git restore -S . {this show the deleted file in the staging area as deleted so we will need to type "git restore ." [this is a 2 part restore] }
+
+git restore (file.extention ?)
+or git restore . [to restore the directory]
+
+git checkout . [?]
+
+git log
+
+to list files you use DIR on windows instead of LS on Linux
+
+to save files
+clear - for clearing
+
+cd git-repos
+
+cd to open that particular folder
+
+
+git checkout [branch name] - to access any branch in the git repo's
+
+if you added a commit and did not write a message and stuck in a screen 
+press esc, then type ":wq" - will get you out of a full blown commit
+and same will happen if you added commit with -M
+
+git add . or git add -A to add all 
+
+git init - initializes a brand new Git repository and begins tracking an existing directory. It adds a hidden subfolder within the existing directory that houses the internal data structure required for version control
+
+git clone - pulls any repisotory in usinf its URL.
+
+git status - shows the status of changes as untracked, modified, or staged. (any changes in the code or code in any of the files)
+
+git add - to add any changes or any new files or whatever by name {eg: git add index.html}
+"stages a change. Git tracks changes to a developer’s codebase, but it’s necessary to stage and take a snapshot of the changes to include them in the project’s history. This command performs staging, the first part of that two-step process. Any changes that are staged will become a part of the next snapshot and a part of the project’s history. Staging and committing separately gives developers complete control over the history of their project without changing how they code and work."
+
+git commit - saves the snapshot to the project history and completes the change-tracking process. In short, a commit functions like taking a photo. Anything that’s been staged with "git add" will become a part of the snapshot with "git commit".
+
+"git commit -m " means adding a message (-m) and the message is going to be in ""
+
+git push - updates the remote repository with any commits made locally to a branch.
+
+git pull - updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate has made commits to a branch on a remote, and they would like to reflect those changes in their local environment.
+
+git branch - shows the branches being worked on locally.
+
+git merge - merges lines of development together. This command is typically used to combine changes made on two distinct branches. For example, a developer would merge when they want to combine changes from a feature branch into the main branch for deployment.
