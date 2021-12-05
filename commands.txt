@@ -1,4 +1,4 @@
-
+# some commands maybe repeated
 
 ----------------
 Deleting a branch
