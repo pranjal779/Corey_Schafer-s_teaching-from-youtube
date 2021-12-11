@@ -30,4 +30,4 @@ touch .<file name ??> #to create a specific file using git apps in the folder u 
 ex -
 $touch .gitignore
 ------------------------
- 
+ trying to add some text for testing skills on Dec/10/2021
