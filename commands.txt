@@ -18,6 +18,14 @@ $ git merge <branch_name>
 $ git push origin main
 
 -------------------------
+
+git branch
+# * main
+
+git switch -c NAME
+# git checkout -b NAME
+================================
+
 # I encountered this while adding some file to another repo of mine, I might have cloned the same repo link inside the original one, nothing was working and i was confused so deleted all the files, yet I think git somehow recognises that there was already a repo link (I hope you got what i meant)
 
 hint: You've added another git repository inside your current repository.
