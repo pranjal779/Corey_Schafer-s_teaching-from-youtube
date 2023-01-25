@@ -1,0 +1,3 @@
+multiple inheritance in python
+
+check for inheritance files Manager def empty mutable datatypes 11:45
