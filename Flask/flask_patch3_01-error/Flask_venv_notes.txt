@@ -1,0 +1,73 @@
+Notes for flask + flask virtual environment
+
+DO NOT put the project files in same location as the venv folder
+
+But outside or in a seperate folder beside the folder
+
+install flask package in venv dir
+
+https://realpython.com/python-virtual-environments-a-primer/
+
+or
+
+https://stackoverflow.com/a/51500040/7848995
+
+might help
+
+
+set FLASK_RUN_PORT=5867
+
+The development server and the production server are two types of servers used in Flask.
+
+A development server is used during the development process of a Flask application. It is a lightweight and simple server that is suitable for local testing and development. The development server is included with Flask and can be started with a single command. It provides features such as automatic reloading of code changes, debugging support, and an easy way to test your application locally.
+
+A production server, on the other hand, is used to serve a Flask application in a live production environment. It is designed to handle large amounts of traffic and handle robust security measures to ensure the application is protected against potential threats. A production server typically uses a more powerful server technology such as Nginx or Apache, and is typically deployed on a remote server or cloud environment.
+
+Both development and production servers have their own specific use cases, and the choice between them depends on the requirements of the project. For example, a developer would typically use a development server for testing and debugging during the development process, while a production server would be used for serving the application to end-users in a live environment.
+
+set FLASK_APP=flaskBlog.py
+
+flask run
+or
+python flaskBlog.py
+
+set FLASK_DEBUG=1
+
+# template inheritance
+	# block for child template to override.
+	for not repeating code
+	
+
+use of Bootstrap
+Add Bootstrap in our project
+
+# used the Bootstrap for Home and About page template with css and js tags
+
+# navigation bar and global styles
+
+   <!--
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    -->
+
+	removing this above snippet in html comment solved the problem.
+
+Forms and User Input
+pip install flask-wtf
+
+installing these inside a virtual venv will throw issues for import
+deactivate it and start
+
+venv\Scripts\activate
+
+vid 3
+
+using wtforms
+sign up and login class made
+secret keys (11:10)
+in a terminal to get random string for secretKey/token
+>>> import secrets
+>>> secrets.token_hex(16)
+
+(16:09) important time stamp for notes
